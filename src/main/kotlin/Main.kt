@@ -91,6 +91,7 @@ fun Tarjeta(texto: String = ""){
         elevation = 2.dp,
         shape = MaterialTheme.shapes.small,
     ){
+        Column {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = currentPadding)
@@ -114,6 +115,13 @@ fun Tarjeta(texto: String = ""){
                 Text(
                     text = (if (isExpanded) "Show less" else "Show more"),
                     color = androidx.compose.ui.graphics.Color.White
+                )
+            }
+        }
+            if (isExpanded){
+                Text(
+                    modifier = Modifier.padding(start = 8.dp, end = 8.dp),
+                    text = "Description"
                 )
             }
         }
